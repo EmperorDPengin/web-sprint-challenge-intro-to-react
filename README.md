@@ -83,6 +83,31 @@ After finishing your required elements, you can push your work further. These go
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
+
+A. React helps us instead of having multiple HTML files for pages it can shape a single HTML file depending on what the user does or the data it has been input
+
+  Things like .render <App /> in order to consolidate all behaviours in components taht can easily be modified and creating States to save and create data to let JS change the look of the HTML accordingly.
+
 1. Describe component state.
+
+A. state is a Get,Set Pair object. it has Single Value that can be accessed by its name and instead of using value = newValue, we simply setValue(newValue). while this is a simplification the idea is the same.
+
 1. Describe props.
+
+A. it is everything the Object, function, action, beharior or event receieves.
+in a Component(props) refers to the values it receies when the component is created.
+they can be left vague or named. althought the naming of the (props) is mostly defined inside the Component in order to sort thru Data or specific object keys and make the component more flexible.
+
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+A. sideEffects are used in tangent with useState. side effects are Dynamic Behaviour and this means they will react in real time. 
+
+//is called anytime the DOM updates.
+useEffect(() => {})
+
+//adding a more specific timing at the end of the Dynamic Behaviour will make it so it only
+//Activates when the target Value changes. the value can be a useState Component.
+
+useEffect(()=>{},[]) <-----Runs only once at the beginning of the App
+
+useEffect(()=>{},[valueToFollow])<----Runs Anytime the Value Changes
